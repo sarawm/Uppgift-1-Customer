@@ -1,6 +1,52 @@
-*.class
+import java.util.ArrayList;
 
-# Package Files #
-*.jar
-*.war
-*.ear
+public class Customer {
+private String name;
+private String civic;
+private String phone;
+private String address;
+    private ArrayList<Order> orders = new ArrayList<Order>();
+
+    public Customer(String name, String civic, String address, String phone) {
+        this.name = name;
+        this.civic = civic;
+        this.address = address;
+        this.phone = phone;
+    }
+
+public void setName (String name){
+    this.name=name;
+}
+public String getName(){
+    return name;
+}
+public void setCivic(String civic){
+    this.civic=civic;
+}
+public String getCivic(){
+    return civic;
+}
+public void setPhone(String phone){
+    this.phone=phone;
+}
+public String getPhone(){
+    return phone;
+}
+public void setAddress(String address){
+    this.address=address;
+}
+public String getAddress(){
+    return address;
+}
+    public void setOrders(ArrayList<Order> orders) {
+        this.orders = orders;
+    }
+
+    public ArrayList<Order> getOrders() {
+        return orders;
+    }
+
+    public void addOrder(Order order) {
+        this.orders.add(order);
+    }
+}
